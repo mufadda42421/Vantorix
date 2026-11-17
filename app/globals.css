@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@theme {
+  /* Soft neutral greys — easy on the eyes, Apple-inspired restraint */
+  --color-background: #ededef;
+  --color-alt: #e3e3e8;
+  --color-foreground: #1d1d1f;
+  --color-muted: #6e6e73;
+  --color-line: #d4d4da;
+  --color-card: #ffffff;
+  --color-accent: #0071e3;
+  --color-accent-hover: #0077ed;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(0, 113, 227, 0.2);
+  color: #1d1d1f;
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e3e3e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #b9b9c0;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9d9da5;
+}
+
+/* Accessible focus ring */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #0071e3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Typography helpers ---------- */
+.display {
+  letter-spacing: -0.028em;
+  font-weight: 700;
+}
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  border-radius: 980px;
+  background: var(--color-foreground);
+  transition: background 0.22s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  background: #424245;
+  box-shadow: 0 12px 32px rgba(29, 29, 31, 0.28);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-foreground);
+  border-radius: 980px;
+  background: #ffffff;
+  border: 1px solid var(--color-line);
+  transition: background 0.22s ease, transform 0.2s ease, border-color 0.22s ease;
+}
+.btn-ghost:hover {
+  background: #f7f7f9;
+  border-color: #c4c4cc;
+}
+.btn-ghost:active {
+  transform: scale(0.97);
+}
+
+.link-accent {
+  color: var(--color-accent);
+  font-weight: 500;
+  transition: color 0.18s ease;
+}
+.link-accent:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Surfaces ---------- */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-line);
+  border-radius: 1.125rem;
+}
+
+.card-lift {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(29, 29, 31, 0.1);
+  border-color: #c4c4cc;
+}
+
+/* Thin framed media panel used for project imagery */
+.media-frame {
+  background: var(--color-alt);
+  border: 1px solid var(--color-line);
+  border-radius: 1.125rem;
+  overflow: hidden;
+}
+
+/* ---------- Marquee ---------- */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-x 32s linear infinite;
+}
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* ---------- Custom cursor (desktop, fine pointers only) ---------- */
+.vt-cursor-dot,
+.vt-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 80;
+  border-radius: 9999px;
+  transform: translate3d(-100px, -100px, 0);
+}
+.vt-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #1d1d1f;
+}
+.vt-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid rgba(29, 29, 31, 0.55);
+  mix-blend-mode: difference;
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
+}
+.vt-cursor-ring[data-hover="true"] {
+  width: 52px;
+  height: 52px;
+  border-color: rgba(29, 29, 31, 0.9);
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .vt-cursor-dot,
+  .vt-cursor-ring {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card-lift, .btn-primary, .btn-ghost { transition: none; }
+  .animate-marquee { animation: none; }
+}

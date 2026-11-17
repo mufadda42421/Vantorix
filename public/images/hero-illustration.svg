@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Abstract line illustration of an interconnected software system">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.4" fill="#e6e6ea"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#dots)"/>
+
+  <!-- horizontal hairline rules -->
+  <g stroke="#e9e9ec" stroke-width="1">
+    <path d="M0 120 H1200"/>
+    <path d="M0 600 H1200"/>
+  </g>
+
+  <!-- orbital system -->
+  <g transform="translate(760,348)" fill="none">
+    <circle r="196" stroke="#d2d2d7" stroke-width="1.4"/>
+    <circle r="138" stroke="#e3e3e7" stroke-width="1.2"/>
+    <circle r="80" stroke="#d2d2d7" stroke-width="1.2"/>
+    <!-- accent arc on outer ring -->
+    <path d="M -196 0 A 196 196 0 0 1 0 -196" stroke="#0071e3" stroke-width="3" stroke-linecap="round"/>
+    <!-- satellite nodes -->
+    <circle cx="196" cy="0" r="7" fill="#ffffff" stroke="#1d1d1f" stroke-width="1.6"/>
+    <circle cx="0" cy="-138" r="10" fill="#1d1d1f"/>
+    <circle cx="-196" cy="0" r="7" fill="#ffffff" stroke="#1d1d1f" stroke-width="1.6"/>
+    <circle cx="0" cy="138" r="7" fill="#ffffff" stroke="#1d1d1f" stroke-width="1.6"/>
+    <circle cx="98" cy="-98" r="5.5" fill="#0071e3"/>
+    <circle cx="-120" cy="70" r="5.5" fill="#0071e3" opacity="0.85"/>
+    <!-- core -->
+    <circle r="30" fill="#ffffff" stroke="#1d1d1f" stroke-width="1.8"/>
+    <path d="M -11 -6.5 L 0 11 L 11 -6.5" stroke="#1d1d1f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- left annotation composition -->
+  <g stroke="#1d1d1f" fill="none" stroke-width="1.6">
+    <rect x="110" y="168" width="150" height="44" rx="10" fill="#ffffff"/>
+    <rect x="128" y="184" width="80" height="4.5" rx="2.25" fill="#1d1d1f" stroke="none"/>
+    <rect x="128" y="196" width="52" height="4" rx="2" fill="#d2d2d7" stroke="none"/>
+
+    <rect x="188" y="300" width="190" height="150" rx="12" fill="#ffffff"/>
+    <circle cx="216" cy="334" r="9" fill="#0071e3" stroke="none"/>
+    <rect x="234" y="329" width="92" height="5" rx="2.5" fill="#1d1d1f" stroke="none"/>
+    <rect x="234" y="340" width="60" height="4" rx="2" fill="#d2d2d7" stroke="none"/>
+    <rect x="210" y="372" width="120" height="4" rx="2" fill="#e3e3e7" stroke="none"/>
+    <rect x="210" y="386" width="140" height="4" rx="2" fill="#e3e3e7" stroke="none"/>
+    <rect x="210" y="400" width="96" height="4" rx="2" fill="#e3e3e7" stroke="none"/>
+
+    <circle cx="296" cy="540" r="40" fill="#ffffff"/>
+    <circle cx="296" cy="540" r="24" stroke="#d2d2d7"/>
+    <circle cx="296" cy="540" r="4.5" fill="#0071e3" stroke="none"/>
+  </g>
+
+  <!-- connectors -->
+  <g stroke="#c9c9ce" stroke-width="1.3" stroke-dasharray="3 5" fill="none">
+    <path d="M 260 212 C 380 220, 430 320, 580 336"/>
+    <path d="M 378 372 C 450 380, 480 360, 580 356"/>
+    <path d="M 332 545 C 420 530, 470 470, 585 425"/>
+  </g>
+
+  <!-- plus marks -->
+  <g stroke="#d2d2d7" stroke-width="1.6" stroke-linecap="round">
+    <path d="M 480 180 v 14 M 473 187 h 14"/>
+    <path d="M 520 520 v 14 M 513 527 h 14"/>
+    <path d="M 1005 192 v 14 M 998 199 h 14"/>
+  </g>
+</svg>

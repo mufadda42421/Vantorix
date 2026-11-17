@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Concept: cinematic portfolio website, light editorial illustration">
+  <rect width="1200" height="720" fill="#ffffff"/>
+
+  <!-- dot grid corner -->
+  <g fill="#ececf0">
+    <circle cx="60" cy="54" r="1.6"/><circle cx="88" cy="54" r="1.6"/><circle cx="116" cy="54" r="1.6"/><circle cx="144" cy="54" r="1.6"/>
+    <circle cx="60" cy="82" r="1.6"/><circle cx="88" cy="82" r="1.6"/><circle cx="116" cy="82" r="1.6"/><circle cx="144" cy="82" r="1.6"/>
+  </g>
+
+  <!-- masthead -->
+  <text x="70" y="132" fill="#6e6e73" font-size="12" font-family="ui-monospace,monospace" letter-spacing="6">PORTFOLIO — 2026</text>
+  <text x="66" y="248" fill="#1d1d1f" font-size="100" font-weight="800" font-family="Georgia,'Times New Roman',serif" letter-spacing="2">MERIDIAN</text>
+  <text x="66" y="345" fill="#1d1d1f" font-size="100" font-weight="800" font-style="italic" font-family="Georgia,'Times New Roman',serif" letter-spacing="2" opacity="0.9">STUDIO</text>
+  <rect x="70" y="376" width="150" height="3.5" fill="#0071e3"/>
+
+  <text x="70" y="445" fill="#6e6e73" font-size="13.5" font-family="ui-sans-serif,system-ui">Selected works across identity,</text>
+  <text x="70" y="466" fill="#6e6e73" font-size="13.5" font-family="ui-sans-serif,system-ui">motion and interaction design.</text>
+
+  <!-- right case panels -->
+  <g>
+    <rect x="650" y="96" width="480" height="152" rx="14" fill="#f5f5f7"/>
+    <rect x="674" y="120" width="80" height="7" rx="3.5" fill="#1d1d1f" opacity="0.9"/>
+    <rect x="674" y="140" width="280" height="17" rx="8.5" fill="#1d1d1f"/>
+    <rect x="674" y="169" width="330" height="6" rx="3" fill="#d2d2d7"/>
+    <rect x="674" y="184" width="290" height="6" rx="3" fill="#e3e3e7"/>
+    <rect x="674" y="210" width="110" height="5" rx="2.5" fill="#d2d2d7"/>
+
+    <rect x="650" y="272" width="480" height="152" rx="14" fill="#f5f5f7"/>
+    <rect x="674" y="296" width="80" height="7" rx="3.5" fill="#0071e3" opacity="0.9"/>
+    <rect x="674" y="316" width="250" height="17" rx="8.5" fill="#1d1d1f"/>
+    <rect x="674" y="345" width="320" height="6" rx="3" fill="#d2d2d7"/>
+    <rect x="674" y="360" width="270" height="6" rx="3" fill="#e3e3e7"/>
+    <rect x="674" y="386" width="110" height="5" rx="2.5" fill="#d2d2d7"/>
+
+    <rect x="650" y="448" width="480" height="152" rx="14" fill="#f5f5f7"/>
+    <rect x="674" y="472" width="80" height="7" rx="3.5" fill="#1d1d1f" opacity="0.55"/>
+    <rect x="674" y="492" width="290" height="17" rx="8.5" fill="#1d1d1f"/>
+    <rect x="674" y="521" width="310" height="6" rx="3" fill="#d2d2d7"/>
+    <rect x="674" y="536" width="240" height="6" rx="3" fill="#e3e3e7"/>
+    <rect x="674" y="562" width="110" height="5" rx="2.5" fill="#d2d2d7"/>
+  </g>
+</svg>
